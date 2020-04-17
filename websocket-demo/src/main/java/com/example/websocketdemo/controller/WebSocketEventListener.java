@@ -61,7 +61,7 @@ public class WebSocketEventListener {
             chatMessage.setSender(username);
 
           //  messagingTemplate.convertAndSend("/topic/public", chatMessage);
-            messagingTemplate.convertAndSend(format("/channel/%s", roomId), chatMessage);
+            messagingTemplate.convertAndSend(format("/chat-room/%s", roomId), chatMessage);
         }
         
     }
